@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Dessiné — une application simple et agréable pour créer des dessins."
+    >
+
+    <title>Dessiné</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo-area">
+
+            <div class="logo">
+                D
+            </div>
+
+            <div class="brand">
+                <h1>Dessiné</h1>
+                <p>Crée quelque chose</p>
+            </div>
+
+        </div>
+
+        <div class="header-actions">
+
+            <button
+                id="undoButton"
+                class="icon-button"
+                title="Annuler"
+            >
+                ↶
+            </button>
+
+            <button
+                id="redoButton"
+                class="icon-button"
+                title="Rétablir"
+            >
+                ↷
+            </button>
+
+            <button
+                id="clearButton"
+                class="delete-button"
+            >
+                Effacer
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <div>
+
+                <span class="eyebrow">
+                    ATELIER DE DESSIN
+                </span>
+
+                <h2>
+                    Imagine.<br>
+                    Dessine.
+                </h2>
+
+                <p>
+                    Une toile simple pour transformer tes idées
+                    en dessins.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="workspace">
+
+            <aside class="toolbar">
+
+                <h3>Outils</h3>
+
+                <div class="tool-group">
+
+                    <span class="tool-label">
+                        Outil
+                    </span>
+
+                    <button
+                        id="brushButton"
+                        class="tool active"
+                    >
+                        <span>✎</span>
+                        Pinceau
+                    </button>
+
+                    <button
+                        id="eraserButton"
+                        class="tool"
+                    >
+                        <span>⌫</span>
+                        Gomme
+                    </button>
+
+                </div>
+
+
+                <div class="tool-group">
+
+                    <span class="tool-label">
+                        Couleur
+                    </span>
+
+                    <div class="color-selector">
+
+                        <input
+                            type="color"
+                            id="colorPicker"
+                            value="#012F7B"
+                        >
+
+                        <div>
+
+                            <strong id="colorValue">
+                                #012F7B
+                            </strong>
+
+                            <small>
+                                Couleur actuelle
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tool-group">
+
+                    <div class="size-heading">
+
+                        <span class="tool-label">
+                            Taille
+                        </span>
+
+                        <strong>
+                            <span id="sizeValue">6</span> px
+                        </strong>
+
+                    </div>
+
+                    <input
+                        type="range"
+                        id="brushSize"
+                        min="1"
+                        max="50"
+                        value="6"
+                    >
+
+                </div>
+
+
+                <div class="tool-group presets">
+
+                    <span class="tool-label">
+                        Tailles rapides
+                    </span>
+
+                    <div class="preset-row">
+
+                        <button data-size="3">
+                            Petit
+                        </button>
+
+                        <button data-size="8">
+                            Moyen
+                        </button>
+
+                        <button data-size="18">
+                            Grand
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="help-box">
+
+                    <span>✦</span>
+
+                    <div>
+
+                        <strong>
+                            Petit conseil
+                        </strong>
+
+                        <p>
+                            Sur iPad, utilise ton doigt ou ton
+                            stylet directement sur la toile.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <section class="drawing-panel">
+
+                <div class="drawing-header">
+
+                    <div>
+
+                        <h3>
+                            Ma toile
+                        </h3>
+
+                        <span id="status">
+                            Prêt à dessiner
+                        </span>
+
+                    </div>
+
+                    <button
+                        id="downloadButton"
+                        class="download-button"
+                    >
+                        Télécharger
+                    </button>
+
+                </div>
+
+
+                <div class="canvas-container">
+
+                    <canvas id="drawingCanvas"></canvas>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <span>
+            Dessiné · 2026
+        </span>
+
+        <span>
+            Crée librement.
+        </span>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
